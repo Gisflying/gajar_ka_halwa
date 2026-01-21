@@ -1,0 +1,315 @@
+/* Sticky warm nav */
+.navWrap{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-top: var(--safe-top);
+  backdrop-filter: blur(14px);
+  background: rgba(255, 247, 234, .72);
+  border-bottom: 1px solid rgba(75,36,22,.12);
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 0;
+  gap: 14px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  text-decoration:none;
+  min-width: 0;
+}
+.brandMark{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:grid;
+  place-items:center;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.55), transparent 60%),
+              linear-gradient(135deg, var(--red), var(--orange));
+  border: 1px solid rgba(75,36,22,.16);
+  box-shadow: 0 10px 22px rgba(75,36,22,.18);
+  font-weight: 800;
+  color: #fff;
+}
+.brandText{
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navLinks{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.navLink{
+  text-decoration:none;
+  color: rgba(28,13,8,.78);
+  font-size: 14px;
+  padding: 10px 10px;
+  border-radius: 12px;
+}
+.navLink:hover{ background: rgba(255, 176, 31, .12); }
+.navCta{
+  text-decoration:none;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 176, 31, .18);
+  border: 1px solid rgba(255, 176, 31, .35);
+  color: rgba(28,13,8,.92);
+  font-weight: 700;
+}
+
+/* Hero with photo */
+.hero{
+  padding: 30px 0 18px;
+}
+.heroGrid{
+  display:grid;
+  grid-template-columns: 1.12fr .88fr;
+  gap: 22px;
+  align-items: center;
+}
+.heroCopy{ padding: 10px 0; }
+.lede{
+  font-size: 17px;
+  color: rgba(28,13,8,.78);
+  max-width: 56ch;
+  margin: 0 0 16px;
+}
+
+.heroActions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 10px 0 14px;
+}
+.button{
+  text-decoration:none;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(75,36,22,.16);
+  background: rgba(255,255,255,.55);
+  color: rgba(28,13,8,.92);
+  font-weight: 750;
+}
+.button.primary{
+  background: linear-gradient(135deg, var(--red), var(--orange));
+  border-color: rgba(255,255,255,.2);
+  color: #fff;
+}
+.button.ghost:hover{ background: rgba(255, 176, 31, .10); }
+
+.heroMeta{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+.metaCard{
+  border-radius: 16px;
+  border: 1px solid rgba(75,36,22,.14);
+  background: rgba(255,255,255,.56);
+  padding: 12px;
+}
+.metaTop{ color: rgba(28,13,8,.6); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+.metaMain{ font-weight: 850; font-size: 18px; margin-top: 4px; }
+.metaSub{ color: rgba(28,13,8,.68); font-size: 12px; }
+
+/* Image card (real photo) */
+.heroArt{ display:flex; justify-content: flex-end; }
+.photoCard{
+  width: min(440px, 100%);
+  border-radius: var(--radius2);
+  border: 1px solid rgba(75,36,22,.14);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,.35);
+  position: relative;
+}
+.photoCard img{
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display:block;
+  transform: scale(1.02);
+}
+.photoOverlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(28,13,8,.62) 100%);
+}
+.photoCaption{
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  color: rgba(255,255,255,.92);
+}
+.photoCaptionTitle{
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.photoCaptionChips{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.chip{
+  display:inline-flex;
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 176, 31, .18);
+  border: 1px solid rgba(255, 176, 31, .35);
+  color: rgba(255,255,255,.92);
+}
+
+/* Sections */
+.section{ padding: 34px 0; }
+.sectionHead{ margin-bottom: 14px; }
+
+.grid2{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.list{ margin: 0; padding-left: 18px; color: rgba(28,13,8,.80); }
+.steps{ margin: 0; padding-left: 18px; }
+.step{ margin-bottom: 10px; }
+.stepTitle{ font-weight: 850; }
+.stepText{ color: rgba(28,13,8,.72); }
+
+/* Story layout */
+.storyGrid{
+  display:grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 14px;
+  align-items: start;
+}
+.storyRail{ display:grid; gap: 10px; }
+.storyTab{
+  text-align: left;
+  width: 100%;
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(75,36,22,.14);
+  background: rgba(255,255,255,.56);
+  color: rgba(28,13,8,.92);
+  cursor: pointer;
+  display:grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.storyTab:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(75,36,22,.12);
+}
+.storyTab.active{
+  background: rgba(255, 176, 31, .14);
+  border-color: rgba(255, 176, 31, .34);
+}
+.storyRoman{
+  width: 34px; height: 34px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(255, 240, 214, .8);
+  border: 1px solid rgba(75,36,22,.12);
+  font-weight: 900;
+}
+.storyTitle{ font-weight: 800; line-height: 1.25; }
+
+/* Pancha Tattva */
+.tattvaWrap{ margin-top: 14px; }
+.tattvaHead{ display:flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.tattvaSub{ color: rgba(28,13,8,.68); font-size: 13px; }
+.tattvaGrid{
+  display:grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+.tattvaCard{
+  border-radius: 16px;
+  border: 1px solid rgba(75,36,22,.14);
+  background: rgba(255,255,255,.56);
+  padding: 12px;
+}
+.tattvaKey{ font-weight: 950; letter-spacing: -0.01em; }
+.tattvaSubKey{ color: rgba(28,13,8,.65); font-size: 12px; margin-top: 2px; }
+.tattvaText{ color: rgba(28,13,8,.72); font-size: 13px; margin-top: 8px; }
+
+/* Nutrition */
+.kcalRow{
+  display:flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  padding-bottom: 10px; border-bottom: 1px solid rgba(75,36,22,.12); margin-bottom: 12px;
+}
+.kcalLabel{ color: rgba(28,13,8,.70); }
+.kcalValue{ font-family: var(--font-serif); font-size: 28px; font-weight: 800; letter-spacing: -0.01em; }
+
+.macroBars{ display:grid; gap: 10px; margin: 10px 0 12px; }
+.bar{ display:grid; grid-template-columns: 70px 1fr 60px; gap: 10px; align-items:center; }
+.barLabel{ color: rgba(28,13,8,.75); font-size: 13px; }
+.barTrack{ height: 10px; border-radius: 999px; background: rgba(75,36,22,.10); border: 1px solid rgba(75,36,22,.10); overflow:hidden; }
+.barFill{ height: 100%; border-radius: 999px; }
+.barFill.carbs{ background: rgba(255, 176, 31, .85); }
+.barFill.fat{ background: rgba(255, 122, 24, .90); }
+.barFill.protein{ background: rgba(227, 59, 46, .88); }
+.barValue{ text-align:right; color: rgba(28,13,8,.75); font-size: 13px; }
+
+.nutritionGrid{ display:grid; gap: 10px; }
+.nutRow{ display:flex; justify-content: space-between; color: rgba(28,13,8,.76); padding: 10px 0; border-bottom: 1px dashed rgba(75,36,22,.18); }
+.nutRow:last-child{ border-bottom: none; padding-bottom: 0; }
+
+/* Footer */
+.footer{
+  padding: 26px 0 calc(26px + var(--safe-bottom));
+  border-top: 1px solid rgba(75,36,22,.12);
+  background: rgba(255,255,255,.40);
+}
+.footerInner{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 14px;
+}
+.footerSmall{ color: rgba(28,13,8,.65); font-size: 13px; margin-top: 8px; max-width: 60ch; }
+.footerRight{ display:flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+.footerLink{ color: rgba(28,13,8,.75); text-decoration:none; padding: 10px 10px; border-radius: 12px; }
+.footerLink:hover{ background: rgba(255, 176, 31, .10); }
+
+/* Scroll reveal animation */
+.reveal{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.on{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .heroGrid{ grid-template-columns: 1fr; }
+  .heroArt{ justify-content: flex-start; }
+  .grid2{ grid-template-columns: 1fr; }
+  .storyGrid{ grid-template-columns: 1fr; }
+  .tattvaGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .navLinks{ gap: 6px; }
+  .navLink{ display:none; }
+  .navCta{ display:inline-flex; }
+  .photoCard img{ height: 320px; }
+}
+@media (max-width: 420px){
+  .heroMeta{ grid-template-columns: 1fr; }
+}
