@@ -169,7 +169,7 @@ function Hero() {
     <div className="hero" id="top">
       <div className="container heroGrid">
         <div className="heroCopy reveal">
-          <h1 className="h1">Gajar ka Halwa</h1>
+          <h1 className="h1">Gajar Ka Halwa By Gaurav</h1>
           <p className="lede">
             Slow-cooked carrots and milk, finished with ghee, cardamom and nuts an Indian winter classic made with patience.
           </p>
@@ -518,7 +518,7 @@ function Footer() {
         <div className="footerLeft">
           <div className="brandFoot">
             <span className="brandMark" aria-hidden="true">ग</span>
-            <span className="brandText">Gajar ka Halwa</span>
+            <span className="brandText">Gajar Ka Halwa By Gaurav </span>
           </div>
           <div className="footerSmall">
             Made with love. Hosted free on Cloudflare Pages.
