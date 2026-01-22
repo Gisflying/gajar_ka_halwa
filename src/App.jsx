@@ -476,7 +476,7 @@ function Nutrition() {
           </div>
 
           <div className="note">
-            Per-100g depends on your final yield (water evaporation), sugar, and ghee. Tell me your ghee+sugar amounts for exact numbers.
+            Per-100g depends on your final yield (water evaporation), sugar and ghee.
           </div>
         </div>
 
