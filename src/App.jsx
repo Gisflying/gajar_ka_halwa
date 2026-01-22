@@ -354,7 +354,7 @@ function Story() {
           </div>
 
           <div className="note">
-            This section is intentionally written in a cultural/spiritual tone—like family storytelling, not a textbook.
+            This section is written in a cultural/spiritual tone. Like family storytelling, not a textbook.
           </div>
         </div>
       </div>
