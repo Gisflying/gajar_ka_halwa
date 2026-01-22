@@ -151,7 +151,7 @@ function Nav() {
       <div className="nav container">
         <a className="brand" href="#top" aria-label="Go to top">
           <span className="brandMark" aria-hidden="true">ग</span>
-          <span className="brandText">Gajar ka Halwa</span>
+          <span className="brandText">Gajar Ka Halwa</span>
         </a>
         <nav className="navLinks" aria-label="Primary">
           {items.map((it) => (
